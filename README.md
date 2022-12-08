@@ -10,7 +10,7 @@ This is a containerized version of [ublue](https://ublue.it) utilizing the lates
 
 WARNING: This is still experimental. You should have Fedora Silverblue 37 already installed:
 
-    sudo rpm-ostree rebase --experimental ostree-unverified-registry:ghcr.io/castrojo/ublue-image:latest
+    sudo rpm-ostree rebase --experimental ostree-unverified-registry:ghcr.io/ublue-os/ubuntu:latest
 
 # Features
 
@@ -34,14 +34,6 @@ Imagine Silverblue but pushed even more into cloud-native land and I'm the condu
 - Core GNOME Applications installed from Flathub
   - GNOME Calculator, Calendar, Characters, Connections, Contacts, Evince, Firmware, Logs, Maps, NautilusPreviewer, TextEditor, Weather, baobab, clocks, eog, and font-viewer
 - All applications installed per user instead of system wide, similar to openSUSE MicroOS. Thanks for the inspiration Team Green!
-
-### Choose Team Blue or Team Orange
-
-![image](https://user-images.githubusercontent.com/1264109/205803912-cbce5490-762f-4674-8fc1-8cb498884dfa.png)
-
-After installation is finished you can either keep the normal Fedora desktop, or choose a subset of Ubuntu's desktop layout.
-Personally I prefer the Ubuntu desktop on my desktops and laptops but upstream GNOME on my tablet and 2-and-1. 
-Go figure.
 
 ## Other Details
 
