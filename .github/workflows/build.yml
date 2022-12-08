@@ -2,7 +2,7 @@ name: build-ublue
 on:
   push:
   schedule:
-    - cron: '0 0 * * *'  # every day at midnight
+    - cron: '15 0 * * *'  # every day at midnight + 15m
 env:
     IMAGE_NAME: ubuntu
     IMAGE_TAGS: latest ${{ github.sha }}
