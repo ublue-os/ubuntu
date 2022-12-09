@@ -1,4 +1,4 @@
-[![build-ublue](https://github.com/castrojo/ublue-image/actions/workflows/build.yml/badge.svg)](https://github.com/castrojo/ublue-image/actions/workflows/build.yml)
+[![build-ublue](https://github.com/ublue-os/ubuntu/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/ubuntu/actions/workflows/build.yml)
 
 # ublue-image
 A familiar(ish) Ubuntu desktop for Fedora Silverblue.
@@ -25,6 +25,7 @@ Imagine Silverblue but pushed even more into cloud-native land and I'm the condu
 - Adds the following packages to the base image:
   - distrobox and gnome-tweaks
   - Dash to Dock and Appindicator GNOME Extensions
+- Ubuntu-like GNOME layout (NOTE: you might need to `sudo dconf update` for this to apply until I figure out why that's busted)   
 - Sets automatic staging of updates for the system 
 - Sets flatpaks to update twice a day
 
@@ -54,10 +55,6 @@ Are you planning on adding more apps and stuff?
 Ugh man why didn't you do nvidia drivers while you're at it?
 
 > I don't have the hardware to test, but you know someone's going to do it, this is really new stuff, part of the reason I am doing this is to show others that this is possible!
-
-I chose the wrong desktop, how do I rerun the initial wizard thing?
-
-> Run `/usr/bin/ublue-firstboot` to rerun the script. 
 
 Should I trust you?
 
