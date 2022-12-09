@@ -1,4 +1,4 @@
-[![build-ublue](https://github.com/castrojo/ublue-image/actions/workflows/build.yml/badge.svg)](https://github.com/castrojo/ublue-image/actions/workflows/build.yml)
+[![build-ublue](https://github.com/ublue-os/ubuntu/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/ubuntu/actions/workflows/build.yml)
 
 # ublue-image
 A familiar(ish) Ubuntu desktop for Fedora Silverblue.
