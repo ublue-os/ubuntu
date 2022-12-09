@@ -6,6 +6,7 @@ COPY usr /usr
 
 RUN rpm-ostree install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-dock yaru-theme && \
     rpm-ostree cleanup -m && \
-    systemctl enable dconf-update.service
+    systemctl unmask dconf-update.service && \
+    systemctl enable dconf-update.service && \
     fc-cache -f /usr/share/fonts/ubuntu && \
     ostree container commit
