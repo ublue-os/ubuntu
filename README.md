@@ -8,7 +8,7 @@ This is a containerized version of [ublue](https://ublue.it) utilizing the lates
 
 # Usage
 
-WARNING: This is still experimental. You should have Fedora Silverblue 37 already installed:
+Warning: This is an experimental feature and should not be used in production, try it in a VM for a while, you have been warned!
 
     sudo rpm-ostree rebase --experimental ostree-unverified-registry:ghcr.io/ublue-os/ubuntu:latest
 
