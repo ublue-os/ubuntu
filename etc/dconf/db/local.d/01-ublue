@@ -6,7 +6,7 @@ enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@mi
 
 # dconf path
 [org/gnome/desktop/background]
-picture-uri='file:///usr/share/backgrounds/lagoon.jpg'
+picture-uri='file:///usr/share/backgrounds/warty-final-ubuntu.png'
 picture-options='stretched'
 primary-color='000000'
 secondary-color='FFFFFF'
