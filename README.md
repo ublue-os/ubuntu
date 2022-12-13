@@ -1,6 +1,6 @@
 [![build-ublue](https://github.com/ublue-os/ubuntu/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/ubuntu/actions/workflows/build.yml)
 
-# ublue-image
+# Ubuntu
 A familiar(ish) Ubuntu desktop for Fedora Silverblue.
 This is a containerized version of [ublue](https://ublue.it) utilizing the latest image based features in ostree.
 
