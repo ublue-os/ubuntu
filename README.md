@@ -14,7 +14,7 @@ Warning: This is an experimental feature and should not be used in production, t
 
 We build date tags as well, so if you want to rebase to a particular day's release:
   
-    sudo rpm-ostree rebase --experimental ostree-unverified-registry:ghcr.io/ublue-os/base:20221217 
+    sudo rpm-ostree rebase --experimental ostree-unverified-registry:ghcr.io/ublue-os/ubuntu:20221217 
 
 The `latest` tag will automatically point to the latest build. 
 
