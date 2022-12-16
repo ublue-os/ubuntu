@@ -12,6 +12,12 @@ Warning: This is an experimental feature and should not be used in production, t
 
     sudo rpm-ostree rebase --experimental ostree-unverified-registry:ghcr.io/ublue-os/ubuntu:latest
 
+We build date tags as well, so if you want to rebase to a particular day's release:
+  
+    sudo rpm-ostree rebase --experimental ostree-unverified-registry:ghcr.io/ublue-os/base:20221217 
+
+The `latest` tag will automatically point to the latest build. 
+
 # Features
 
 This is intended to be an example of how you can derive custom OCI images of your operating system, built out of git and then pushed to a registry.
