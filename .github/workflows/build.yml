@@ -1,11 +1,13 @@
 name: build-ublue
 on:
-  push:
+  pull_request:
+    branches:
+      - main
   schedule:
     - cron: '15 0 * * *'  # every day at midnight + 15m
 env:
     IMAGE_NAME: ubuntu
-    IMAGE_TAGS: latest ${{ github.sha }}
+    IMAGE_TAGS: latest ${{ github.sha }} 
     IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
     REGISTRY_USER: ${{ github.actor }}
     REGISTRY_PASSWORD: ${{ github.token }}
@@ -16,11 +18,13 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
-    steps:
+    steps: 
       # Checkout push-to-registry action github repository
       - name: Checkout Push to Registry action
         uses: actions/checkout@v2
-
+      - name: set env
+        run: echo "DATE=$(date +'%Y%m%d')" >> $GITHUB_ENV
+             
       # Build image using Buildah action
       - name: Build Image
         id: build_image
@@ -29,8 +33,16 @@ jobs:
           containerfiles: |
             ./Containerfile
           image: ${{ env.IMAGE_NAME }}
-          tags: ${{ env.IMAGE_TAGS }}
+          tags: ${{ env.IMAGE_TAGS }} ${{ env.DATE }} 
           oci: true
+
+      # Workaround bug where capital letters in your GitHub user name make it impossible to push to GHCR.
+      # https://github.com/macbre/push-to-ghcr/issues/12
+      - name: Lowercase Registry
+        id: registry_case
+        uses: ASzc/change-string-case-action@v5
+        with:
+          string: ${{ env.IMAGE_REGISTRY }}
 
       # Push the image to GHCR (Image Registry)
       - name: Push To GHCR
@@ -39,7 +51,7 @@ jobs:
         with:
           image: ${{ steps.build_image.outputs.image }}
           tags: ${{ steps.build_image.outputs.tags }}
-          registry: ${{ env.IMAGE_REGISTRY }}
+          registry: ${{ steps.registry_case.outputs.lowercase }}
           username: ${{ env.REGISTRY_USER }}
           password: ${{ env.REGISTRY_PASSWORD }}
           extra-args: |
@@ -48,4 +60,3 @@ jobs:
       - name: Echo outputs
         run: |
           echo "${{ toJSON(steps.push.outputs) }}"
-
