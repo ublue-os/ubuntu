@@ -3,6 +3,10 @@
 # Ubuntu
 A familiar(ish) Ubuntu desktop for Fedora Silverblue.
 This is a containerized version of [ublue](https://ublue.it) utilizing the latest image based features in ostree.
+You'll need to have Fedora Silverblue installed to rebase to this image (see below). 
+We anticipate that at some point the Fedora installer will grow an ability to install a custom image. 
+
+It is an interpretation of "What if we could rebuild Ubuntu from the ground up built on cloud-native technology?" 
 
 > "Let's see what's out there." - Jean-Luc Picard
 
@@ -20,20 +24,22 @@ The `latest` tag will automatically point to the latest build.
 
 # Features
 
-This is intended to be an example of how you can derive custom OCI images of your operating system, built out of git and then pushed to a registry.
-This image is then splatted onto your disk, therefore eliminating the risk of you mangling repos or having to reset before upgrades. 
-Imagine Silverblue but pushed even more into cloud-native land and I'm the conductor, honk honk. 
+### Changes from stock Fedora
 
-### Changes from stock Silverblue
+- Ubuntu-like GNOME layout
+  - Includes the following GNOME Extensions
+    - Dash to Dock - for a more Unity-like dock
+    - Appindicator - for tray-like icons in the top right corner
+    - GSConnect - Integrate your mobile device with your desktop
+- Built on top of the the [uBlue base image](https://github.com/ublue-os/base) - the system is designed for automatic staging of updates, we recommend shutting down your computer when not using it to ensure all updates are being applied
 
-- Start with a base Fedora Silverblue 37 image
-- Removes Firefox from the base image
-- Adds the following packages to the base image:
-  - distrobox and gnome-tweaks
-  - Dash to Dock and Appindicator GNOME Extensions
-- Ubuntu-like GNOME layout (NOTE: you might need to `sudo dconf update` for this to apply until I figure out why that's busted)   
-- Sets automatic staging of updates for the system 
-- Sets flatpaks to update twice a day
+### Future Features
+
+These are currently unimplemented ideas that we plan on adding:
+
+- Include a preconfigured Ubuntu LTS distrobox
+- Provide a `:lts` tag derived from CentOS Stream for a more enterprise-like cadence
+- Inclusion of more Ubuntu artwork
 
 ### Applications
 
@@ -42,21 +48,19 @@ Imagine Silverblue but pushed even more into cloud-native land and I'm the condu
   - GNOME Calculator, Calendar, Characters, Connections, Contacts, Evince, Firmware, Logs, Maps, NautilusPreviewer, TextEditor, Weather, baobab, clocks, eog, and font-viewer
 - All applications installed per user instead of system wide, similar to openSUSE MicroOS. Thanks for the inspiration Team Green!
 
-## Other Details
-
-Images are built here once a day and when changes are pushed to this repo.
-As the Fedora Silverblue images update those changes will propogate to you via this image automatically.
-I'll adjust this based on what Fedora does image publication wise so we're nice and efficient.
-
 ## Frequently Asked Questions
 
 What about codecs?
 
-> So far pulling in Firefox and Celluloid pull in all the right stuff, it's unlikely you'll need extra codecs on the base image.
+> So far pulling in Firefox and Celluloid pull in all the right stuff, it's unlikely you'll need extra codecs
 
 Are you planning on adding more apps and stuff?
 
-> Not really, but I'm hoping to do more images like -gaming, -cloudnative, etc. that derive off of this base image.
+> Not really, but I'm hoping to do more images like -gaming, -cloudnative, etc. that derive off of this base image. Once we figure out a way to cleanly split out application installation from the base image we'll split it up to make it easy to customize.
+
+I cancelled the first run thing or it failed, how do I rerun it?
+
+> Running `/usr/bin/ublue-firstboot` will restart the process. You might need to delete `~/.config/ublue/firstboot-done` if you ever want to rerun it again.  
 
 Ugh man why didn't you do nvidia drivers while you're at it?
 
