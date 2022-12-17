@@ -22,6 +22,8 @@ We build date tags as well, so if you want to rebase to a particular day's relea
 
 The `latest` tag will automatically point to the latest build. 
 
+![image](https://user-images.githubusercontent.com/1264109/208218934-31437d3b-aac7-418a-a59e-c44d5d867a7b.png)
+
 # Features
 
 ### Changes from stock Fedora
