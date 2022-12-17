@@ -32,11 +32,19 @@ title-bar-font="Ubuntu Bold 12"
 
 [org/gnome/shell/extensions/dash-to-dock]
 dock-fixed="true"
-dock-position="LEFT"
+dock-position="'LEFT'"
 extend-height="true"
 force-straight-corner="false"
 custom-theme-shring="true"
 disable-overview-on-startup="true"
+custom-theme="false"
+apply-glossy-effect="true"
+autohide="false"
+autohide-in-fullscreen="false"
+background-color="'#ffffff'"
+background-opacity="0.69999999999999996"
+bolt-support="true"
+dash-to-dock/click-action="'focus-or-previews'"
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Control><Alt>t'
