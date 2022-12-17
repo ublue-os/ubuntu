@@ -4,7 +4,8 @@ FROM ghcr.io/ublue-os/base:latest
 COPY etc /etc
 COPY usr /usr
 
-RUN rpm-ostree install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-dock yaru-theme && \
+RUN rpm-ostree install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-dock yaru-theme \
+    openssl gnome-shell-extension-gsconnect nautilus-gsconnect && \
     rpm-ostree cleanup -m && \
     systemctl unmask dconf-update.service && \
     systemctl enable dconf-update.service && \
