@@ -5,6 +5,9 @@ on:
       - main
   schedule:
     - cron: '21 21 * * *'  # every day at midnight + 15m
+  push:
+    branches:
+      - main
 env:
     IMAGE_NAME: ubuntu
     IMAGE_TAGS: latest ${{ github.sha }} 
