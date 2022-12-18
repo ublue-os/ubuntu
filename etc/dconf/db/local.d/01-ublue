@@ -54,13 +54,3 @@ name='gnome-terminal'
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
 
-[org/gnome/Terminal/ProfilesList]
-default ublue-terminal-profile
-
-[org/gnome/terminal/legacy/profiles:/:ublue-terminal-profile] 
-foreground-color='#AFAFAF'
-background-color='#000000'
-use-theme-colors=false
-audible-bell=false
-use-system-font=false
-font='Monospace 10'
