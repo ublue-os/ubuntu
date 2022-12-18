@@ -35,6 +35,7 @@ jobs:
           image: ${{ env.IMAGE_NAME }}
           tags: ${{ env.IMAGE_TAGS }} ${{ env.DATE }} 
           oci: true
+          layers: false
 
       # Workaround bug where capital letters in your GitHub user name make it impossible to push to GHCR.
       # https://github.com/macbre/push-to-ghcr/issues/12
