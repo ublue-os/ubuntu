@@ -35,7 +35,9 @@ The `latest` tag will automatically point to the latest build.
     - Dash to Dock - for a more Unity-like dock
     - Appindicator - for tray-like icons in the top right corner
     - GSConnect - Integrate your mobile device with your desktop
-- Built on top of the the [uBlue base image](https://github.com/ublue-os/base) - the system is designed for automatic staging of updates, we recommend shutting down your computer when not using it to ensure all updates are being applied
+- Built on top of the the [uBlue base image](https://github.com/ublue-os/base) 
+  - System designed for automatic staging of updates, shut down your computer when not using it to ensure all updates are being applied
+  - GNOME Software is set to not notify, updates are at the system level instead, no need to manage any of that here
 
 ### Future Features
 

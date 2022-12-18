@@ -55,3 +55,7 @@ name='gnome-terminal'
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
 
+[org/gnome/software]
+allow-updates="false"
+download-updates="false"
+download-updates-notify="false"
