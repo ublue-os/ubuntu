@@ -4,7 +4,7 @@
     <wallpaper>
         <name>uBlue Default</name>
         <filename>/usr/share/backgrounds/warty-final-ubuntu.png</filename>
-	<filename-dark>/usr/share/backgrounds/warty-final-ubuntu-night.png</filename-dark>
+	<filename-dark>/usr/share/backgrounds/warty-final-ubuntu-dark.png</filename-dark>
         <options>zoom</options>
         <shade_type>solid</shade_type>
         <pcolor>#51a2da</pcolor>
