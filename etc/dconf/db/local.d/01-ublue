@@ -60,7 +60,7 @@ allow-updates="false"
 download-updates="false"
 download-updates-notify="false"
 
-[com/raggesilver/Blackbox]
+[com/raggesilver/BlackBox]
 command-as-login-shell="true"
 use-custom-command="true"
 custom-shell-command="distrobox enter ubuntu"
