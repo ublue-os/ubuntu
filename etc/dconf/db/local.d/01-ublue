@@ -59,3 +59,10 @@ custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybin
 allow-updates="false"
 download-updates="false"
 download-updates-notify="false"
+
+[com/raggesilver/Blackbox]
+command-as-login-shell="true"
+use-custom-command="true"
+custom-shell-command="distrobox enter ubuntu"
+theme-dark="Yaru"
+style-preference="uint32 2"
