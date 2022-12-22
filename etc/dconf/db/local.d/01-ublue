@@ -12,40 +12,40 @@ primary-color='000000'
 secondary-color='FFFFFF'
 
 [org/gnome/desktop/interface]
-enable-hot-corners="false"
-cursor-theme="Yaru"
-icon-theme="Yaru"
-gtk-theme="Yaru"
-font-antialiasing="rgba"
-font-name="Ubuntu 12"
-document-font-name="Ubuntu 12"
-monospace-font-name="Ubuntu Mono 18"
+enable-hot-corners='false'
+cursor-theme='Yaru'
+icon-theme='Yaru'
+gtk-theme='Yaru'
+font-antialiasing='rgba'
+font-name='Ubuntu 12'
+document-font-name='Ubuntu 12'
+monospace-font-name='Ubuntu Mono 18'
 
 [org/gnome/desktop/sound]
-allow-volume-above-100-percent="true"
-theme-name="Yaru"
+allow-volume-above-100-percent='true'
+theme-name='Yaru'
 
 [org/gnome/desktop/wm/preferences]
-button-layout=":minimize,maximize,close"
-num-workspaces="4"
-title-bar-font="Ubuntu Bold 12"
+button-layout=':minimize,maximize,close'
+num-workspaces='4'
+title-bar-font='Ubuntu Bold 12'
 
 [org/gnome/shell/extensions/dash-to-dock]
-dock-fixed="true"
-dock-position="LEFT"
-extend-height="true"
-force-straight-corner="false"
-custom-theme-shring="true"
-disable-overview-on-startup="true"
-custom-theme="false"
-apply-glossy-effect="true"
-autohide="false"
-autohide-in-fullscreen="false"
-transparency-mode="FIXED"
-background-color="'#ffffff'"
-background-opacity="0.69999999999999996"
-bolt-support="true"
-dash-to-dock/click-action="'focus-or-previews'"
+dock-fixed='true'
+dock-position='LEFT'
+extend-height='true'
+force-straight-corner='false'
+custom-theme-shring='true'
+disable-overview-on-startup='true'
+custom-theme='false'
+apply-glossy-effect='true'
+autohide='false'
+autohide-in-fullscreen='false'
+transparency-mode='FIXED'
+background-color='#ffffff'
+background-opacity='0.69999999999999996'
+bolt-support='true'
+dash-to-dock/click-action='focus-or-previews'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Control><Alt>t'
@@ -56,13 +56,13 @@ name='gnome-terminal'
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
 
 [org/gnome/software]
-allow-updates="false"
-download-updates="false"
-download-updates-notify="false"
+allow-updates='false'
+download-updates='false'
+download-updates-notify='false'
 
 [com/raggesilver/BlackBox]
-command-as-login-shell="true"
-use-custom-command="true"
-custom-shell-command="distrobox enter ubuntu"
-theme-dark="Yaru"
-style-preference="uint32 2"
+command-as-login-shell='true'
+use-custom-command='true'
+custom-shell-command='distrobox enter ubuntu'
+theme-dark='Yaru'
+style-preference='uint32 2'
