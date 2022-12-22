@@ -7,7 +7,7 @@ enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@mi
 # dconf path
 [org/gnome/desktop/background]
 picture-uri='file:///usr/share/backgrounds/ublue.xml'
-picture-options='stretched'
+picture-options='zoom'
 primary-color='000000'
 secondary-color='FFFFFF'
 
