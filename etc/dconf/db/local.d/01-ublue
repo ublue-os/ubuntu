@@ -71,5 +71,4 @@ use-custom-command=true
 custom-shell-command='distrobox enter ubuntu'
 theme-dark='Yaru'
 style-preference=2
-terminal-padding=10,10,10,10
 font='Ubuntu Mono 18'
