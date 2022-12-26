@@ -59,6 +59,9 @@ System updates are image-based and automatic. Applications are logically seperat
       - Refer to the [Distrobox documentation](https://distrobox.privatedns.org/#distrobox) for more information on using and configuring custom images
     - GNOME Terminal
       - `Ctrl`-`Alt`-`t` - will launch a host-level GNOME Terminal if you need to do host-level things in Fedora (you shouldn't need to do much).   
+- Kubernetes Tools
+    - [kind](https://kind.sigs.k8s.io/) - Do a `kind create cluster` to get started!
+    - [kubectl](https://kubernetes.io/docs/reference/kubectl/)
 - Built on top of the the [uBlue base image](https://github.com/ublue-os/base) 
   - System designed for automatic staging of updates
     - If you've never used an image-based Linux before just use your computer normally
