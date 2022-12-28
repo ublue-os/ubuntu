@@ -81,6 +81,12 @@ These are currently unimplemented ideas that we plan on adding:
   - GNOME Calculator, Calendar, Characters, Connections, Contacts, Evince, Firmware, Logs, Maps, NautilusPreviewer, TextEditor, Weather, baobab, clocks, eog, and font-viewer
 - All applications installed per user instead of system wide, similar to openSUSE MicroOS. Thanks for the inspiration Team Green!
 
+## Verification
+
+These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
+
+    cosign verify --key cosign.pub ghcr.io/ublue-os/ubuntu
+
 ## Frequently Asked Questions
 
 What about codecs?
