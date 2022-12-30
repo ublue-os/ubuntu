@@ -12,6 +12,7 @@ RUN rpm-ostree install gnome-shell-extension-appindicator gnome-shell-extension-
     systemctl enable dconf-update.service && \
     systemctl enable rpm-ostree-countme.service && \
     fc-cache -f /usr/share/fonts/ubuntu && \
+    rm -f /etc/yum.repos.d/lyessaadi-blackbox.repo && \
     ostree container commit
 
 # K8s tools
