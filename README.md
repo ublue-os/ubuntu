@@ -49,6 +49,7 @@ System updates are image-based and automatic. Applications are logically seperat
     - Dash to Dock - for a more Unity-like dock
     - Appindicator - for tray-like icons in the top right corner
     - GSConnect - Integrate your mobile device with your desktop
+    - GNOME Variable Refresh Rate patches included via the [GNOME VRR COPR](https://copr.fedorainfracloud.org/coprs/kylegospo/gnome-vrr/)
 - GNOME Software with Flathub
     - Use a familiar software center UI to install graphical software
 - Built-in Ubuntu user space 
