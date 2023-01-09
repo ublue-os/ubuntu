@@ -63,6 +63,9 @@ System updates are image-based and automatic. Applications are logically seperat
 - Kubernetes Tools
     - [kind](https://kind.sigs.k8s.io/) - Do a `kind create cluster` to get started!
     - [kubectl](https://kubernetes.io/docs/reference/kubectl/)
+- Quality of Life Improvements
+    - systemd shutdown timers adjusted to 15 seconds
+    - udev rules for game controllers included out of the box
 - Built on top of the the [uBlue base image](https://github.com/ublue-os/base) 
   - System designed for automatic staging of updates
     - If you've never used an image-based Linux before just use your computer normally
