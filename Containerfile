@@ -9,7 +9,7 @@ RUN wget https://copr.fedorainfracloud.org/coprs/kylegospo/gnome-vrr/repo/fedora
 RUN rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:kylegospo:gnome-vrr mutter gnome-control-center gnome-control-center-filesystem
 
 RUN rpm-ostree install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-dock yaru-theme \
-    openssl gnome-shell-extension-gsconnect nautilus-gsconnect blackbox-terminal podman-docker && \
+    openssl gnome-shell-extension-gsconnect nautilus-gsconnect blackbox-terminal just podman-docker && \
     systemctl unmask dconf-update.service && \
     systemctl enable dconf-update.service && \
     systemctl enable rpm-ostree-countme.service && \
