@@ -13,7 +13,7 @@ RUN rpm-ostree install gnome-shell-extension-appindicator gnome-shell-extension-
     systemctl unmask dconf-update.service && \
     systemctl enable dconf-update.service && \
     systemctl enable rpm-ostree-countme.service && \
-    systemctl enable --now tailscaled && \
+    systemctl enable tailscaled.service && \
     fc-cache -f /usr/share/fonts/ubuntu && \
     rm -f /etc/yum.repos.d/lyessaadi-blackbox.repo && \
     rm -f /etc/yum.repos.d/_copr_kylegospo-gnome-vrr.repo && \
