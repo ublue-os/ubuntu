@@ -20,7 +20,6 @@ RUN rpm-ostree install gnome-shell-extension-appindicator gnome-shell-extension-
     rm -f /etc/yum.repos.d/tailscale.repo && \
     sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/user.conf && \
     sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf && \
-    mkdir -p -m 0755 /nix && \
     ostree container commit
 
 # K8s tools
