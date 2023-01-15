@@ -22,7 +22,7 @@ RUN rpm-ostree install gnome-shell-extension-appindicator gnome-shell-extension-
     sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf && \
     ostree container commit
     
-RUN rpm-ostree db diff --changelogs > /tmp/changelog && \
+RUN rpm-ostree db diff --changelogs > /etc/changelog && \
     ostree container commit
 
 # K8s tools
