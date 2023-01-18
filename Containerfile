@@ -1,12 +1,9 @@
 FROM ghcr.io/ublue-os/base:latest
+FROM ghcr.io/ublue-os/gnome-vrr:latest
 # See https://pagure.io/releng/issue/11047 for final location
 
 COPY etc /etc
 COPY usr /usr
-
-RUN wget https://copr.fedorainfracloud.org/coprs/lyessaadi/blackbox/repo/fedora-37/lyessaadi-blackbox-fedora-37.repo -O /etc/yum.repos.d/lyessaadi-blackbox.repo
-RUN wget https://copr.fedorainfracloud.org/coprs/kylegospo/gnome-vrr/repo/fedora-$(rpm -E %fedora)/kylegospo-gnome-vrr-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_kylegospo-gnome-vrr.repo
-RUN rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:kylegospo:gnome-vrr mutter gnome-control-center gnome-control-center-filesystem
 
 RUN rpm-ostree install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-dock yaru-theme \
     openssl gnome-shell-extension-gsconnect nautilus-gsconnect blackbox-terminal just podman-docker tailscale && \
@@ -16,7 +13,6 @@ RUN rpm-ostree install gnome-shell-extension-appindicator gnome-shell-extension-
     systemctl enable tailscaled.service && \
     fc-cache -f /usr/share/fonts/ubuntu && \
     rm -f /etc/yum.repos.d/lyessaadi-blackbox.repo && \
-    rm -f /etc/yum.repos.d/_copr_kylegospo-gnome-vrr.repo && \
     rm -f /etc/yum.repos.d/tailscale.repo && \
     sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/user.conf && \
     sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf && \
