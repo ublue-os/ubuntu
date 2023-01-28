@@ -107,6 +107,13 @@ I cancelled the first run thing or it failed, how do I rerun it?
 
 > Running `/usr/bin/ublue-firstboot` will restart the process. You might need to delete `~/.config/ublue/firstboot-done` if you ever want to rerun it again.  
 
+How do I get my GNOME back to normal Fedora defaults?
+
+> We set the default dconf keys in `/etc/dconf/db/local`, removing those keys and updating the database will take you back to the fedora default: 
+>
+    sudo rm -f /etc/dconf/db/local
+    sudo dconf update
+
 Ugh man why didn't you do nvidia drivers while you're at it?
 
 > I don't have the hardware to test, but you know someone's going to do it, this is really new stuff, part of the reason I am doing this is to show others that this is possible!
