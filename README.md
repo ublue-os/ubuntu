@@ -23,7 +23,7 @@ The endstate is a system as reliable as a Chromebook with near-zero maintainance
 1. After you reboot you should [pin the working deployment](https://docs.fedoraproject.org/en-US/fedora-silverblue/faq/#_about_using_silverblue) so you can safely rollback. 
 1. Open a terminal and rebase the OS to this image:
 
-        sudo rpm-ostree rebase --experimental ostree-unverified-registry:ghcr.io/ublue-os/ubuntu:latest
+        sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/ubuntu:latest
         
 1. Reboot the system and you're done!
 
@@ -34,7 +34,7 @@ The endstate is a system as reliable as a Chromebook with near-zero maintainance
 Check the [Silverblue documentation](https://docs.fedoraproject.org/en-US/fedora-silverblue/) for instructions on how to use rpm-ostree. 
 We build date tags as well, so if you want to rebase to a particular day's release:
   
-    sudo rpm-ostree rebase --experimental ostree-unverified-registry:ghcr.io/ublue-os/ubuntu:20221217 
+    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/ubuntu:20221217 
 
 The `latest` tag will automatically point to the latest build. 
 
