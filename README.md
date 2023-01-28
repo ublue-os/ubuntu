@@ -17,7 +17,7 @@ The endstate is a system as reliable as a Chromebook with near-zero maintainance
 # Usage
 
 > **Warning** 
-> This is an experimental feature and should not be used in production, try it in a VM for a while, you have been warned!
+> This is an experimental feature and should not be used in production, try it in a VM for a while! If you are rebasing and not doing a clean install do a `touch ~/.config/ublue/firstboot-done` to keep your flatpak configuration untouched, otherwise we're going to mangle it (for science). 
 
 1. Download and install [Fedora Silverblue](https://silverblue.fedoraproject.org/download)
 1. After you reboot you should [pin the working deployment](https://docs.fedoraproject.org/en-US/fedora-silverblue/faq/#_about_using_silverblue) so you can safely rollback. 
