@@ -12,7 +12,7 @@ RUN rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfra
 
 RUN rpm-ostree install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-dock yaru-theme \
     openssl gnome-shell-extension-gsconnect nautilus-gsconnect blackbox-terminal just podman-docker \
-    tailscale libgda libgda-sqlite && \
+    tailscale libgda libgda-sqlite virt-manager libvirt && \
     systemctl unmask dconf-update.service && \
     systemctl enable dconf-update.service && \
     systemctl enable rpm-ostree-countme.service && \
