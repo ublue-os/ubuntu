@@ -7,12 +7,13 @@ enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@mi
 # dconf path
 [org/gnome/desktop/background]
 picture-uri='file:///usr/share/backgrounds/ublue.xml'
-picture-options='stretched'
+picture-uri-dark='file:///usr/share/backgrounds/ublue.xml'
+picture-options='zoom'
 primary-color='000000'
 secondary-color='FFFFFF'
 
 [org/gnome/desktop/interface]
-enable-hot-corners='false'
+enable-hot-corners=false
 cursor-theme='Yaru'
 icon-theme='Yaru'
 gtk-theme='Yaru'
@@ -22,7 +23,7 @@ document-font-name='Ubuntu 12'
 monospace-font-name='Ubuntu Mono 18'
 
 [org/gnome/desktop/sound]
-allow-volume-above-100-percent='true'
+allow-volume-above-100-percent=true
 theme-name='Yaru'
 
 [org/gnome/desktop/wm/preferences]
@@ -31,20 +32,20 @@ num-workspaces='4'
 title-bar-font='Ubuntu Bold 12'
 
 [org/gnome/shell/extensions/dash-to-dock]
-dock-fixed='true'
+dock-fixed=true
 dock-position='LEFT'
-extend-height='true'
-force-straight-corner='false'
-custom-theme-shring='true'
-disable-overview-on-startup='true'
-custom-theme='false'
-apply-glossy-effect='true'
-autohide='false'
-autohide-in-fullscreen='false'
+extend-height=true
+force-straight-corner=false
+custom-theme-shring=true
+disable-overview-on-startup=true
+custom-theme=false
+apply-glossy-effect=true
+autohide=false
+autohide-in-fullscreen=false
 transparency-mode='FIXED'
 background-color='#ffffff'
 background-opacity='0.69999999999999996'
-bolt-support='true'
+bolt-support=true
 click-action='focus-or-previews'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
@@ -52,17 +53,26 @@ binding='<Control><Alt>t'
 command='gnome-terminal'
 name='gnome-terminal'
 
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Control><Alt>u'
+command='blackbox'
+name='blackbox'
+
 [org/gnome/settings-daemon/plugins/media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/' ]
 
 [org/gnome/software]
-allow-updates='false'
-download-updates='false'
-download-updates-notify='false'
+allow-updates=false
+download-updates=false
+download-updates-notify=false
 
 [com/raggesilver/BlackBox]
-command-as-login-shell='true'
-use-custom-command='true'
+command-as-login-shell=true
+use-custom-command=true
 custom-shell-command='distrobox enter ubuntu'
+theme-light='Solarized Light'
 theme-dark='Yaru'
-style-preference='uint32 2'
+style-preference=2
+font='Ubuntu Mono 18'
+window-width=975
+window-height=650
