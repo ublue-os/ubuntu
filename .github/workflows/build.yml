@@ -8,7 +8,7 @@ on:
   push:
     branches:
       - main
-  paths-ignore:
+    paths-ignore:
       - '**/README.md'
 env:
     IMAGE_NAME: ubuntu
