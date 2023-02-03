@@ -22,7 +22,7 @@ RUN rpm-ostree install blackbox-terminal gnome-shell-extension-appindicator gnom
     rm -f /etc/yum.repos.d/lyessaadi-blackbox.repo && \
     rm -f /etc/yum.repos.d/_copr_kylegospo-gnome-vrr.repo && \
     rm -f /etc/yum.repos.d/tailscale.repo && \
-    rm -f sunwire-input-remapper-fedora-37.repo && \
+    rm -f /etc/yum.repos.d/sunwire-input-remapper-fedora-37.repo && \
     sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/user.conf && \
     sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf && \
     ostree container commit
