@@ -10,7 +10,7 @@ It is an interpretation of "What if we could rebuild Ubuntu from the ground up b
 The goal is to provide an Ubuntu experience using the most amount of automation possible.
 The endstate is a system as reliable as a Chromebook with near-zero maintainance, but with the power of Ubuntu and Fedora fused together. 
 
-![image](https://user-images.githubusercontent.com/1264109/209229025-ad64ee88-50c1-4344-a5af-6e76da36b72f.png)
+![image](https://user-images.githubusercontent.com/294627/216749516-536b7ff9-7cb1-4acf-9be5-f6e38e6bd613.png)
 
 > "Let's see what's out there." - Jean-Luc Picard
 
