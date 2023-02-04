@@ -60,9 +60,10 @@ System updates are image-based and automatic. Applications are logically seperat
       - Refer to the [Distrobox documentation](https://distrobox.privatedns.org/#distrobox) for more information on using and configuring custom images
     - GNOME Terminal
       - `Ctrl`-`Alt`-`t` - will launch a host-level GNOME Terminal if you need to do host-level things in Fedora (you shouldn't need to do much).   
-- Kubernetes Tools
-    - [kind](https://kind.sigs.k8s.io/) - Do a `kind create cluster` to get started!
-    - [kubectl](https://kubernetes.io/docs/reference/kubectl/)
+- Cloud Native Tools
+    - [kind](https://kind.sigs.k8s.io/) - Run a Kubernetes cluster on your machine. Do a `kind create cluster` to get started!
+    - [kubectl](https://kubernetes.io/docs/reference/kubectl/) - Administer Kubernetes Clusters
+    - [Podman-Docker](https://github.com/containers/podman) - Automatically aliases the `docker` command to `podman`
 - Quality of Life Improvements
     - systemd shutdown timers adjusted to 15 seconds
     - udev rules for game controllers included out of the box
