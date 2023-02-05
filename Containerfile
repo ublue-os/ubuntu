@@ -34,3 +34,9 @@ COPY --from=cgr.dev/chainguard/kubectl:latest /usr/bin/kubectl /usr/bin/kubectl
 RUN curl -Lo ./kind "https://kind.sigs.k8s.io/dl/v0.17.0/kind-$(uname)-amd64"
 RUN chmod +x ./kind
 RUN mv ./kind /usr/bin/kind
+
+
+# Vanilla-first-setup
+COPY --from==ghcr.io/adamisrael/vanilla-first-setup:latest vanilla-first-setup.tar.gz /opt/vanilla-first-setup.tar.gz
+RUN tar xf vanilla-first-setup.tar.gz --strip-component=1 -C / && \
+    chmod +x /usr/local/bin/vanilla-first-setup
