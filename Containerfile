@@ -12,8 +12,8 @@ RUN wget https://copr.fedorainfracloud.org/coprs/sunwire/input-remapper/repo/fed
 RUN rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:kylegospo:gnome-vrr mutter gnome-control-center gnome-control-center-filesystem
 
 RUN rpm-ostree install blackbox-terminal gnome-shell-extension-appindicator gnome-shell-extension-dash-to-dock \
-    gnome-shell-extension-gsconnect nautilus-gsconnect just libgda libgda-sqlite openssl podman-docker \
-    python3-input-remapper tailscale yaru-theme && \
+    gnome-shell-extension-gsconnect nautilus-gsconnect just libgda libgda-sqlite libratbag-ratbagd openssl podman-docker \
+    python3-input-remapper tailscale wireguard-tools yaru-theme && \
     systemctl unmask dconf-update.service && \
     systemctl enable dconf-update.service && \
     systemctl enable rpm-ostree-countme.service && \
