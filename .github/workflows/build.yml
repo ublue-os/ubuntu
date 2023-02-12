@@ -4,7 +4,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '20 20 * * *'  # 8:20pm everyday
+    - cron: '21 20 * * *'  # 9:20pm everyday
   push:
     branches:
       - main
@@ -25,7 +25,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        major_version: [37]
+        major_version: [37, 38]
         include:
           - major_version: 37
             is_latest: true
