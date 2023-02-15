@@ -15,7 +15,8 @@ RUN rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfra
 
 RUN rpm-ostree install blackbox-terminal gnome-shell-extension-appindicator gnome-shell-extension-dash-to-dock \
     gnome-shell-extension-gsconnect nautilus-gsconnect just libgda libgda-sqlite libratbag-ratbagd openssl podman-docker \
-    python3-input-remapper tailscale wireguard-tools yaru-theme && \
+    python3-input-remapper tailscale virt-manager wireguard-tools yaru-theme && \
+    rm -f /var/lib/unbound/root.key && \
     systemctl unmask dconf-update.service && \
     systemctl enable dconf-update.service && \
     systemctl enable rpm-ostree-countme.service && \
