@@ -33,6 +33,7 @@ RUN rpm-ostree install blackbox-terminal gnome-shell-extension-appindicator gnom
 # K8s tools
 
 COPY --from=cgr.dev/chainguard/kubectl:latest /usr/bin/kubectl /usr/bin/kubectl
+COPY --from=cgr.dev/chainguard/cosign:latest /usr/bin/cosign /usr/bin/cosign
 
 RUN curl -Lo ./kind "https://kind.sigs.k8s.io/dl/v0.17.0/kind-$(uname)-amd64"
 RUN chmod +x ./kind
