@@ -3,13 +3,17 @@ on:
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - '**.md'
+      - '**.txt'
   schedule:
     - cron: '21 20 * * *'  # 9:20pm everyday
   push:
     branches:
       - main
     paths-ignore:
-      - '**/README.md'
+      - '**.md'
+      - '**.txt'    
 env:
     IMAGE_NAME: ubuntu
     IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
