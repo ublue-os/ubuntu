@@ -21,6 +21,7 @@ RUN rpm-ostree install blackbox-terminal gnome-shell-extension-appindicator gnom
     systemctl enable dconf-update.service && \
     systemctl enable rpm-ostree-countme.service && \
     systemctl enable tailscaled.service && \
+    systemctl enable nix.mount && \
     fc-cache -f /usr/share/fonts/ubuntu && \
     rm -f /etc/yum.repos.d/lyessaadi-blackbox.repo && \
     rm -f /etc/yum.repos.d/_copr_kylegospo-gnome-vrr.repo && \

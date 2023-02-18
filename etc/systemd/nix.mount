@@ -1,0 +1,10 @@
+[Unit]
+Description=Mount /nix from ~/.nix
+After=local-fs.target var-home.mount ensure-nix-dir.service
+Wants=ensure-nix-dir.service
+[Mount]
+Options=bind,nofail
+What=/var/home/benjamin/.nix
+Where=/nix
+[Install]
+WantedBy=multi-user.target

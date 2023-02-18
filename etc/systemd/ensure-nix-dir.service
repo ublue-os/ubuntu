@@ -1,0 +1,12 @@
+[Unit]
+Description=Ensure /nix is present
+
+[Service]
+Type=oneshot
+ExecStartPre=chattr -i /
+ExecStart=mkdir -p -m 0755 /nix
+ExecStart=chown -R 1000 /nix
+EcecStop=chattr +i /
+
+[Install]
+WantedBy=multi-user.target
