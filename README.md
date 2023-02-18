@@ -66,6 +66,9 @@ System updates are image-based and automatic. Applications are logically seperat
     - [Podman-Docker](https://github.com/containers/podman) - Automatically aliases the `docker` command to `podman`
     - [virt-manager](https://virt-manager.org/) - for virtual machine management 
 - Quality of Life Improvements
+    - [webapp-manager] for Progressive Web App (PWA) management
+      - Uses the included Firefox, no other browser download needed
+      - Thanks to Linux Mint for a great tool!
     - systemd shutdown timers adjusted to 15 seconds
     - udev rules for game controllers included out of the box
     - [Tailscale](https://tailscale.com/) for VPN
