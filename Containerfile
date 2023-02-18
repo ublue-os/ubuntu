@@ -18,6 +18,7 @@ RUN rpm-ostree install blackbox-terminal gnome-shell-extension-appindicator gnom
     gnome-shell-extension-gsconnect nautilus-gsconnect just libgda libgda-sqlite libratbag-ratbagd openssl podman-docker \
     python3-input-remapper tailscale virt-manager wireguard-tools webapp-manager yaru-theme && \
     rm -f /var/lib/unbound/root.key && \
+    rm -f /var/lib/freeipmi/ipckey && \
     systemctl unmask dconf-update.service && \
     systemctl enable dconf-update.service && \
     systemctl enable rpm-ostree-countme.service && \
