@@ -61,9 +61,10 @@ System updates are image-based and automatic. Applications are logically seperat
     - GNOME Terminal
       - `Ctrl`-`Alt`-`t` - will launch a host-level GNOME Terminal if you need to do host-level things in Fedora (you shouldn't need to do much).   
 - Cloud Native Tools
-    - [kind](https://kind.sigs.k8s.io/) - Run a Kubernetes cluster on your machine. Do a `kind create cluster` to get started!
+    - [kind](https://kind.sigs.k8s.io/) - Run a Kubernetes cluster on your machine. Do a `kind create cluster` on the host to get started!
     - [kubectl](https://kubernetes.io/docs/reference/kubectl/) - Administer Kubernetes Clusters
     - [Podman-Docker](https://github.com/containers/podman) - Automatically aliases the `docker` command to `podman`
+    - [virt-manager](https://virt-manager.org/) - for virtual machine management 
 - Quality of Life Improvements
     - systemd shutdown timers adjusted to 15 seconds
     - udev rules for game controllers included out of the box
@@ -80,6 +81,7 @@ System updates are image-based and automatic. Applications are logically seperat
 These are currently unimplemented ideas that we plan on adding:
 
 - Provide a `:lts` tag derived from CentOS Stream for a more enterprise-like cadence
+- [Firecracker](https://github.com/firecracker-microvm/firecracker) - help wanted with this!
 - Inclusion of more Ubuntu artwork
 
 ### Applications
