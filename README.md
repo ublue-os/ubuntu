@@ -2,11 +2,9 @@
 
 # Ubuntu
 A familiar(ish) Ubuntu desktop for Fedora Silverblue.
-This is a containerized version of [ublue](https://ublue.it) utilizing the latest image based features in ostree.
-You'll need to have Fedora Silverblue installed to rebase to this image (see below). 
-We anticipate that at some point the Fedora installer will grow an ability to install a custom image. 
+Currently you'll need to have Fedora Silverblue installed to rebase to this image (see below). We will provide ISOs as soon as the custom image feature lands in the Fedora installer.
 
-It is an interpretation of "What if we could rebuild Ubuntu from the ground up built on cloud-native technology?"
+This is an interpretation of "What if we could rebuild Ubuntu from the ground up built on cloud-native technology?"
 The goal is to provide an Ubuntu experience using the most amount of automation possible.
 The endstate is a system as reliable as a Chromebook with near-zero maintainance, but with the power of Ubuntu and Fedora fused together. 
 
