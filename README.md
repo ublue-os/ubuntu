@@ -48,6 +48,7 @@ System updates are image-based and automatic. Applications are logically seperat
     - Appindicator - for tray-like icons in the top right corner
     - GSConnect - Integrate your mobile device with your desktop
     - GNOME Variable Refresh Rate patches included via the [GNOME VRR COPR](https://copr.fedorainfracloud.org/coprs/kylegospo/gnome-vrr/)
+    - Blur my Shell - for dat bling
 - GNOME Software with Flathub
     - Use a familiar software center UI to install graphical software
 - Built-in Ubuntu user space 
@@ -104,10 +105,6 @@ What about codecs?
 
 > It's unlikely you'll need extra codecs, Flathub provides everything you need. You might need to [force enable hardware acceleration](https://fedoraproject.org/wiki/Firefox_Hardware_acceleration#Web_page_rendering) in Firefox directly. 
 
-Are you planning on adding more apps and stuff?
-
-> Not really, but I'm hoping to do more images like -gaming, -cloudnative, etc. that derive off of this base image. Once we figure out a way to cleanly split out application installation from the base image we'll split it up to make it easy to customize.
-
 I cancelled the first run thing or it failed, how do I rerun it?
 
 > Running `/usr/bin/ublue-firstboot` will restart the process. You might need to delete `~/.config/ublue/firstboot-done` if you ever want to rerun it again.  
@@ -118,10 +115,6 @@ How do I get my GNOME back to normal Fedora defaults?
 >
     sudo rm -f /etc/dconf/db/local
     sudo dconf update
-
-Ugh man why didn't you do nvidia drivers while you're at it?
-
-> I don't have the hardware to test, but you know someone's going to do it, this is really new stuff, part of the reason I am doing this is to show others that this is possible!
 
 Should I trust you?
 

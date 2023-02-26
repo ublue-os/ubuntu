@@ -15,8 +15,9 @@ RUN wget https://copr.fedorainfracloud.org/coprs/kylegospo/webapp-manager/repo/f
 RUN rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:kylegospo:gnome-vrr mutter gnome-control-center gnome-control-center-filesystem
 RUN rpm-ostree override remove gnome-software-rpm-ostree 
 RUN rpm-ostree install blackbox-terminal gnome-shell-extension-appindicator gnome-shell-extension-dash-to-dock \
-    gnome-shell-extension-gsconnect nautilus-gsconnect just libgda libgda-sqlite libratbag-ratbagd openssl podman-docker \
-    python3-input-remapper tailscale virt-manager wireguard-tools webapp-manager yaru-theme && \
+    gnome-shell-extension-blur-my-shell gnome-shell-extension-gsconnect nautilus-gsconnect \
+    just libgda libgda-sqlite libratbag-ratbagd openssl podman-docker python3-input-remapper \
+    tailscale virt-manager wireguard-tools webapp-manager yaru-theme && \
     rm -f /var/lib/unbound/root.key && \
     rm -f /var/lib/freeipmi/ipckey && \
     systemctl unmask dconf-update.service && \
