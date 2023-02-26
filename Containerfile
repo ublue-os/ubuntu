@@ -6,7 +6,7 @@ FROM ghcr.io/ublue-os/base:${FEDORA_MAJOR_VERSION}
 COPY etc /etc
 COPY usr /usr
 
-COPY --from=ghcr.io/ublue-os/udev-rules etc/udev/rules.d/* /etc/udev/rules.d
+COPY --from=ghcr.io/ublue-os/udev-rules:latest /ublue-os-udev-rules /
 
 RUN wget https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo -O /etc/yum.repos.d/terra.repo
 RUN wget https://copr.fedorainfracloud.org/coprs/kylegospo/gnome-vrr/repo/fedora-$(rpm -E %fedora)/kylegospo-gnome-vrr-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_kylegospo-gnome-vrr.repo
