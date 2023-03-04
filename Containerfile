@@ -7,6 +7,7 @@ COPY usr /usr
 
 COPY --from=ghcr.io/ublue-os/config:latest /files/ublue-os-udev-rules /
 COPY --from=ghcr.io/ublue-os/config:latest /files/ublue-os-update-services /
+COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 
 COPY ublue-firstboot /usr/bin
 COPY recipe.yml /etc/ublue-recipe.yml
