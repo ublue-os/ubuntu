@@ -7,7 +7,7 @@ on:
       - '**.md'
       - '**.txt'
   schedule:
-    - cron: '20 20 * * *'  # 8:20pm everyday
+    - cron: '21 20 * * *'  # 9:20pm everyday
   push:
     branches:
       - main
@@ -15,7 +15,7 @@ on:
       - '**.md'
       - '**.txt'
 env:
-    IMAGE_BASE_NAME: ubuntu
+    IMAGE_BASE_NAME: main
     IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
 
 jobs:
@@ -29,12 +29,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_name: [main]
+        image_name: [ubuntu]
         major_version: [37]
         include:
           - major_version: 37
             is_latest_version: true
             is_stable_version: true
+          - major_version: 38
+            is_latest_version: true
+            is_stable_version: false
     steps: 
       # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action
@@ -42,7 +45,7 @@ jobs:
 
       - name: Matrix Variables
         run: |
-          echo "IMAGE_NAME=${{ format('{0}-{1}', matrix.image_name, env.IMAGE_BASE_NAME) }}" >> $GITHUB_ENV
+          echo "IMAGE_NAME=${{ format('{1}', matrix.image_name, env.IMAGE_BASE_NAME) }}" >> $GITHUB_ENV
 
       - name: Generate tags
         id: generate-tags
@@ -92,11 +95,11 @@ jobs:
         id: meta
         with:
           images: |
-            $IMAGE_BASE_NAME
+            ${{ env.IMAGE_NAME }}
           labels: |
-            org.opencontainers.image.title=$IMAGE_BASE_NAME
-            org.opencontainers.image.description=Fedora Silverblue for Ubuntu Expatriates 
-            io.artifacthub.package.readme-url=https://raw.githubusercontent.com/ublue-os/ubuntu/ubuntu/README.md
+            org.opencontainers.image.title=${{ env.IMAGE_NAME }}
+            org.opencontainers.image.description=A base ${{ env.IMAGE_NAME }} image with batteries included
+            io.artifacthub.package.readme-url=https://raw.githubusercontent.com/ublue-os/main/main/README.md
             io.artifacthub.package.logo-url=https://avatars.githubusercontent.com/u/120078124?s=200&v=4
 
       # Build image using Buildah action
@@ -106,11 +109,11 @@ jobs:
         with:
           containerfiles: |
             ./Containerfile
-          image: ubuntu
+          image: ${{ env.IMAGE_NAME }}
           tags: |
             ${{ steps.generate-tags.outputs.alias_tags }}
           build-args: |
-            IMAGE_NAME=ubuntu
+            IMAGE_NAME=${{ matrix.image_name }}
             FEDORA_MAJOR_VERSION=${{ matrix.major_version }}
           labels: ${{ steps.meta.outputs.labels }}
           oci: false
@@ -157,7 +160,7 @@ jobs:
         run: |
           echo "${{ env.COSIGN_PRIVATE_KEY }}" > cosign.key
           wc -c cosign.key
-          cosign sign -y --key cosign.key ${{ steps.registry_case.outputs.lowercase }}/ubuntu@${TAGS}
+          cosign sign -y --key cosign.key ${{ steps.registry_case.outputs.lowercase }}/${{ env.IMAGE_NAME }}@${TAGS}
         env:
           TAGS: ${{ steps.push.outputs.digest }}
           COSIGN_EXPERIMENTAL: false
@@ -167,3 +170,4 @@ jobs:
         if: github.event_name != 'pull_request'
         run: |
           echo "${{ toJSON(steps.push.outputs) }}"
+
