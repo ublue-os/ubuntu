@@ -105,16 +105,14 @@ What about codecs?
 
 > It's unlikely you'll need extra codecs, Flathub provides everything you need. You might need to [force enable hardware acceleration](https://fedoraproject.org/wiki/Firefox_Hardware_acceleration#Web_page_rendering) in Firefox directly. 
 
-I cancelled the first run thing or it failed, how do I rerun it?
-
-> Running `/usr/bin/ublue-firstboot` will restart the process. You might need to delete `~/.config/ublue/firstboot-done` if you ever want to rerun it again.  
-
 How do I get my GNOME back to normal Fedora defaults?
 
 > We set the default dconf keys in `/etc/dconf/db/local`, removing those keys and updating the database will take you back to the fedora default: 
->
+
     sudo rm -f /etc/dconf/db/local
     sudo dconf update
+    
+If you prefer a vanilla GNOME installation check out [silverblue-main](https://github.com/ublue-os/main) or [silverblue-nvidia](https://github.com/ublue-os/nvidia) for a more upstream experience.
 
 Should I trust you?
 
