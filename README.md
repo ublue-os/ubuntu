@@ -1,5 +1,9 @@
 [![build-ublue](https://github.com/ublue-os/ubuntu/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/ubuntu/actions/workflows/build.yml)
 
+## This image is being deprecated after F37, if you're using it images will continue to be made but not receive feature updates
+
+Check out [Bluefin](https://github.com/ublue-os/bluefin) replaces this image and it's much better, see you there!
+
 # Ubuntu
 A familiar(ish) Ubuntu desktop for Fedora Silverblue.
 Currently you'll need to have Fedora Silverblue installed to rebase to this image (see below). We will provide ISOs as soon as the custom image feature lands in the Fedora installer.
