@@ -2,7 +2,7 @@
 
 ## This image is being deprecated after F37, if you're using it images will continue to be made but not receive feature updates
 
-Check out [Bluefin](https://github.com/ublue-os/bluefin) replaces this image and it's much better, see you there!
+Check out [Bluefin](https://github.com/ublue-os/bluefin), that replaces this image and it's much better, see you there!
 
 # Ubuntu
 A familiar(ish) Ubuntu desktop for Fedora Silverblue.
